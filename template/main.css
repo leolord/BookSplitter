@@ -1,0 +1,38 @@
+body{
+    width:65%;
+    margin:auto;
+    text-align:center;
+    background-color:#E7F4FE
+}
+h1{
+    color:red;
+}
+article{
+    text-align:left;
+    line-height:38px;
+    text-indent: 2em;
+}
+.sections{
+    list-style-type:none;
+    display:block;
+    border:none;
+}
+li{
+    float:left;
+    width:25%;
+}
+a:link{
+    color:#004e00;
+}
+a:visited{
+    color:#A7A4F0;
+}
+li a{
+    display:block;
+    line-height:25px;
+    margin:5px;
+    text-decoration:none;
+    color:#fff;
+    height:40px;
+    font-size:15px;
+}

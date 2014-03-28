@@ -1,0 +1,21 @@
+{
+  "name": "BookSplitter",
+  "version": "0.0.1",
+  "description": "This little scripe can split text book into sections, and convert results to html. To change the output html looks, you can modify main.css file in template folder.",
+  "main": "split.js",
+  "dependencies": {
+    "split": "^0.3.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "node test"
+  },
+  "keywords": [
+    "text",
+    "book",
+    "splliter",
+    "html"
+  ],
+  "author": "leolord",
+  "license": "ISC"
+}
