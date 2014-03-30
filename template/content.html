@@ -5,13 +5,24 @@
         <title>****title****</title>
         <link rel="stylesheet" href="main.css">
         <script>
+            var yPos = 0;
+            var speed = 5;
             window.onkeyup = function(event){
                 if(event.keyIdentifier=== 'Left'){
                     window.location.href="****prev****";
-                    }else if(event.keyIdentifier === 'Right'){
+                }else if(event.keyIdentifier === 'Right'){
                     window.location.href="****next****";
                 }
-            }
+            };
+            window.onkeypress = function(event){
+                if(event.keyIdentifier === 'U+004A'){
+                        yPos += speed;
+                        window.scroll(0,yPos);
+                }else if(event.keyIdentifier === 'U+004B'){
+                        yPos -= speed;
+                        window.scroll(0,yPos);
+                }
+            };
         </script>
     </head>
     <body>
