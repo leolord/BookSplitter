@@ -5,8 +5,7 @@
         <title>****title****</title>
         <link rel="stylesheet" href="main.css">
         <script>
-            var yPos = 0;
-            var speed = 5;
+            var speed = 8;
             window.onkeyup = function(event){
                 if(event.keyIdentifier=== 'Left'){
                     window.location.href="****prev****";
@@ -16,11 +15,9 @@
             };
             window.onkeypress = function(event){
                 if(event.keyIdentifier === 'U+004A'){
-                        yPos += speed;
-                        window.scroll(0,yPos);
+                    window.scroll(0,window.scrollY+speed);
                 }else if(event.keyIdentifier === 'U+004B'){
-                        yPos -= speed;
-                        window.scroll(0,yPos);
+                    window.scroll(0,window.scrollY-speed);
                 }
             };
         </script>
