@@ -6,11 +6,19 @@
         <link rel="stylesheet" href="main.css">
         <script>
             var speed = 8;
+            var hideCursor = function(){
+                document.body.style.cursor='none';
+            };
+            window.onload = function(){
+                hideCursor();
+            };
             window.onkeyup = function(event){
-                if(event.keyIdentifier=== 'Left'){
+                if(event.keyIdentifier=== 'Left'|| event.keyIdentifier=== 'U+0048'){
                     window.location.href="****prev****";
-                }else if(event.keyIdentifier === 'Right'){
+                }else if(event.keyIdentifier === 'Right' || event.keyIdentifier === 'U+004C'){
                     window.location.href="****next****";
+                }else if(event.keyIdentifier === 'U+0049'){
+                    window.location.href="index.html";
                 }
             };
             window.onkeypress = function(event){
