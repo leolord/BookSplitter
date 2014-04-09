@@ -6,6 +6,7 @@
         <link rel="stylesheet" href="main.css">
         <script>
             var speed = 8;
+            var autoScrollHandle;
             var hideCursor = function(){
                 document.body.style.cursor='none';
             };
@@ -13,18 +14,29 @@
                 hideCursor();
             };
             window.onkeyup = function(event){
-                if(event.keyIdentifier=== 'Left'|| event.keyIdentifier=== 'U+0048'){
+                var KI = event.keyIdentifier;
+                if(KI=== 'Left'|| KI=== 'U+0048'){
                     window.location.href="****prev****";
-                }else if(event.keyIdentifier === 'Right' || event.keyIdentifier === 'U+004C'){
+                }else if(KI === 'Right' || KI === 'U+004C'){
                     window.location.href="****next****";
-                }else if(event.keyIdentifier === 'U+0049'){
+                }else if(KI === 'U+0049'){
                     window.location.href="index.html";
+                }else if(KI === "U+0041"){
+                    if(autoScrollHandle === undefined){
+                        autoScrollHandle = setInterval(function(){
+                            window.scroll(0,window.scrollY+speed);
+                        },500);
+                    }else{
+                        clearInterval(autoScrollHandle);
+                        autoScrollHandle = undefined;
+                    }
                 }
             };
             window.onkeypress = function(event){
-                if(event.keyIdentifier === 'U+004A'){
+                var KI = event.keyIdentifier;
+                if(KI === 'U+004A'){
                     window.scroll(0,window.scrollY+speed);
-                }else if(event.keyIdentifier === 'U+004B'){
+                }else if(KI === 'U+004B'){
                     window.scroll(0,window.scrollY-speed);
                 }
             };
